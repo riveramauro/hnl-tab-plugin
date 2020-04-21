@@ -14,6 +14,11 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<?php
+ echo 'Hello from file';
+ say_hello();
+
+?>
 
 <div class="wrap">
   <h1 class="wp-heading-inline">H&L Tab Form</h1>

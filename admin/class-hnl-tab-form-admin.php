@@ -130,4 +130,13 @@ class Hnl_Tab_Form_Admin {
       include_once( 'partials/hnl-tab-form-admin-display.php' );
   }
 
+  public function display_an_option( $option ) {
+    $option_result = get_option($option);
+    return $option_result;
+  }
+
+  public function say_hello( ) {
+    echo 'Hello';
+  }
+
 }
