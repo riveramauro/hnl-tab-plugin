@@ -13,10 +13,10 @@
  * @package           Hnl_Tab_Form
  *
  * @wordpress-plugin
- * Plugin Name:       HnL Tab Form Plugin
+ * Plugin Name:       HnL Tab Form
  * Plugin URI:        https://github.com/riveramauro/hnl-tab-plugin
  * Description:       HubSpot contact form
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            Mauricio Rivera
  * Author URI:        https://mauriciorivera.co
  * License:           GPL-2.0+
