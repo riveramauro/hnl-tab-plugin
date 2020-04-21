@@ -1,0 +1,53 @@
+/* Contact Tab */
+#contactTab{
+  background: #FFDE7D;
+  color:#000;
+  position: fixed;
+  top: 45%;
+  right: 0;
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+  transform: translateX(40px) rotate(-90deg);
+  cursor: pointer;
+  transition: ease 1s;
+  z-index: 99;
+}
+#contactTab:hover{
+  background: rgb(235, 204, 111);
+}
+
+#contactTabSlider{
+  background:#fff;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -600px;
+  height: 100%;
+  width: 100%;
+  box-shadow: -10px 0 60px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  overflow: auto;
+  transition: all 1s;
+}
+#contactTabSlider.tabOpen{
+  right: 0;
+}
+#contactContainer{
+  overflow: auto;
+  padding: 2em;
+  margin-bottom: 1em;
+}
+#closeTab{
+  font-weight: bold;
+  color: #9c9c9c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2em;
+}
+
+@media (min-width: 767px){
+  #contactTabSlider{
+  max-width: 350px;
+  }
+}
