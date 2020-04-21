@@ -13,7 +13,7 @@
  * @package           Hnl_Tab_Form
  *
  * @wordpress-plugin
- * Plugin Name:       HnL Tab Form
+ * Plugin Name:       HnL Tab Form Plugin
  * Plugin URI:        https://github.com/riveramauro/hnl-tab-plugin
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
