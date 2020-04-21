@@ -16,7 +16,7 @@
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
 <div class="wrap">
-  <h1 class="wp-heading-inline"><?php echo $this->get_plugin_data( 'Name' ) ?></h1>
+  <h1 class="wp-heading-inline">H&L Tab Form</h1>
   <hr>
   <h2>Contact Tab Fields</h2>
   <br>
