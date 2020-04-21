@@ -14,3 +14,7 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+
+<div>
+  <h1>Hello World!</h1>
+</div>
