@@ -15,8 +15,8 @@
  * @wordpress-plugin
  * Plugin Name:       HnL Tab Form Plugin
  * Plugin URI:        https://github.com/riveramauro/hnl-tab-plugin
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.1
+ * Description:       HubSpot contact form
+ * Version:           1.0.2
  * Author:            Mauricio Rivera
  * Author URI:        https://mauriciorivera.co
  * License:           GPL-2.0+
