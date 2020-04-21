@@ -15,6 +15,11 @@
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
 
-<div>
-  <h1>Hello World!</h1>
+<div class="wrap">
+  <h1 class="wp-heading-inline"><?php echo $this->get_plugin_data( 'Name' ) ?></h1>
+  <hr>
+  <h2>Contact Tab Fields</h2>
+  <br>
+  <span class="description">This is a description for a form element</span><br>
+  <input type="text" value="regular-text" class="regular-text" /><br>
 </div>
