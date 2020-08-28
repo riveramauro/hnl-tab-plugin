@@ -131,8 +131,7 @@ class Hnl_Tab_Form_Admin {
   }
 
   public function display_an_option( $option ) {
-    $option_result = get_option($option);
-    return $option_result;
+    return get_option($option);
   }
 
   public function say_hello( ) {

@@ -10,21 +10,32 @@
  *
  * @package    Hnl_Tab_Form
  * @subpackage Hnl_Tab_Form/admin/partials
+ * 
  */
+
+ $testing = Hnl_Tab_Form_Admin::display_an_option('template');
+ echo $testing;
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
-<?php
- echo 'Hello from file';
- say_hello();
-
-?>
-
 <div class="wrap">
-  <h1 class="wp-heading-inline">H&L Tab Form</h1>
+  <h1 class="wp-heading-inline"><?php echo esc_html( get_admin_page_title() ); ?></h1>
   <hr>
   <h2>Contact Tab Fields</h2>
   <br>
-  <span class="description">This is a description for a form element</span><br>
-  <input type="text" value="regular-text" class="regular-text" /><br>
+  <form method="post" action="<?php echo esc_html( admin_url( 'admin-post.php' ) ); ?>">
+    <strong>HubSpot Form ID</strong><br>
+    <input type="text" name="hnl-hubspot-id" value="" class="regular-text" />
+    <br><br>
+    <strong>Form tab title</strong><br>
+    <input type="text" name="hnl-tab-title" value="" class="regular-text" />
+    <br><br>
+    <strong>Form tab color</strong><br>
+    <input type="text" name="hnl-tab-color" value="" class="regular-text" /><br>
+    <span class="description">Please use HEX colors (ie. #000000)</span><br>
+    <?php
+      wp_nonce_field( 'hnl-options-save', 'hnl-custom-mesage' );
+      submit_button();
+    ?>
+  </form>
 </div>
