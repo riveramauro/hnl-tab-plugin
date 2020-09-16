@@ -116,8 +116,7 @@ class Hnl_Tab_Form_Admin {
       *        Administration Menus: http://codex.wordpress.org/Administration_Menus
       *
       */
-      add_options_page( 'H&L Tab Form', 'H&L Tab Form', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
-      );
+      add_options_page( 'H&L Tab Form', 'H&L Tab Form', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page') );
   }
 
   /**
@@ -129,6 +128,22 @@ class Hnl_Tab_Form_Admin {
   public function display_plugin_setup_page() {
       include_once( 'partials/hnl-tab-form-admin-display.php' );
   }
+
+ public function options_update() {
+  register_setting($this->plugin_name, $this->plugin_name, array($this, 'validate'));
+}
+
+public function validate($input) {
+    // All checkboxes inputs        
+    $valid = array();
+
+    //Cleanup
+    $valid['hubspot_id'] = (isset($input['hubspot_id']) && !empty($input['hubspot_id'])) ? $input['hubspot_id'] : '';
+    $valid['tab_title'] = (isset($input['tab_title']) && !empty($input['tab_title'])) ? $input['tab_title'] : '';
+    $valid['tab_color'] = (isset($input['tab_color']) && !empty($input['tab_color'])) ? $input['tab_color'] : '';
+
+    return $valid;
+ }
 
   public function display_an_option( $option ) {
     return get_option($option);

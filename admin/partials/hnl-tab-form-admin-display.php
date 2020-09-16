@@ -23,19 +23,32 @@
   <hr>
   <h2>Contact Tab Fields</h2>
   <br>
-  <form method="post" action="<?php echo esc_html( admin_url( 'admin-post.php' ) ); ?>">
+  <form method="post" name="hnl_form_options" action="options.php">
+    <?php
+    
+      $options = get_option($this->plugin_name);
+
+      $hubspot_id = $options['hubspot_id'];
+      $tab_title = $options['tab_title'];
+      $tab_color = $options['tab_color'];
+
+      print_r($options);
+    
+    ?>
+
+    <?php
+      settings_fields($this->plugin_name);
+      do_settings_sections($this->plugin_name);
+    ?>
     <strong>HubSpot Form ID</strong><br>
-    <input type="text" name="hnl-hubspot-id" value="" class="regular-text" />
+    <input type="text" name="<?php echo $this->plugin_name;?>[hubspot_id]" value="<?php echo $hubspot_id; ?>" class="regular-text" />
     <br><br>
     <strong>Form tab title</strong><br>
-    <input type="text" name="hnl-tab-title" value="" class="regular-text" />
+    <input type="text" name="<?php echo $this->plugin_name;?>[tab_title]" value="<?php echo $tab_title; ?>" class="regular-text" />
     <br><br>
     <strong>Form tab color</strong><br>
-    <input type="text" name="hnl-tab-color" value="" class="regular-text" /><br>
+    <input type="text" name="<?php echo $this->plugin_name;?>[tab_color]" value="<?php echo $tab_color; ?>" class="regular-text" /><br>
     <span class="description">Please use HEX colors (ie. #000000)</span><br>
-    <?php
-      wp_nonce_field( 'hnl-options-save', 'hnl-custom-mesage' );
-      submit_button();
-    ?>
+    <?php submit_button(__('Save all changes', $this->plugin_name), 'primary','submit', TRUE); ?>
   </form>
 </div>
