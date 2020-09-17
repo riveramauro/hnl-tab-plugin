@@ -42,9 +42,10 @@
       settings_fields($this->plugin_name);
       do_settings_sections($this->plugin_name);
     ?>
-    <strong>HubSpot Form ID</strong><br>
+    <strong>HubSpot Portal ID</strong><br>
     <input type="text" name="<?php echo $this->plugin_name;?>[portal_id]" value="<?php echo $portal_id; ?>" class="regular-text" />
     <br><br>
+    <strong>HubSpot Form ID</strong><br>
     <input type="text" name="<?php echo $this->plugin_name;?>[form_id]" value="<?php echo $form_id; ?>" class="regular-text" />
     <br><br>
     <strong>Form tab title</strong><br>
