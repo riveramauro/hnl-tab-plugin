@@ -16,7 +16,7 @@
  * Plugin Name:       HnL Tab Form
  * Plugin URI:        https://github.com/riveramauro/hnl-tab-plugin
  * Description:       HubSpot contact form
- * Version:           1.2.0
+ * Version:           1.2.1
  * Author:            Mauricio Rivera
  * Author URI:        https://mauriciorivera.co
  * License:           GPL-2.0+
