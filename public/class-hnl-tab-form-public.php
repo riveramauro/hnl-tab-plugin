@@ -117,8 +117,8 @@ class Hnl_Tab_Form_Public {
       <h3>Get Started!</h3>
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
       <script>hbspt.forms.create({
-          portalId: "<?php echo $form_id; ?>",
-          formId: "<?php echo $portal_id; ?>",
+          portalId: "<?php echo $portal_id; ?>",
+          formId: "<?php echo $form_id; ?>",
       onFormSubmit: function($form){
       document.cookie = 'hsf=true; path=/';
       }
