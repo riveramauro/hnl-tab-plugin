@@ -138,7 +138,8 @@ public function validate($input) {
     $valid = array();
 
     //Cleanup
-    $valid['hubspot_id'] = (isset($input['hubspot_id']) && !empty($input['hubspot_id'])) ? $input['hubspot_id'] : '';
+    $valid['portal_id'] = (isset($input['portal_id']) && !empty($input['portal_id'])) ? $input['portal_id'] : '';
+    $valid['form_id'] = (isset($input['form_id']) && !empty($input['form_id'])) ? $input['form_id'] : '';
     $valid['tab_title'] = (isset($input['tab_title']) && !empty($input['tab_title'])) ? $input['tab_title'] : '';
     $valid['tab_color'] = (isset($input['tab_color']) && !empty($input['tab_color'])) ? $input['tab_color'] : '';
 

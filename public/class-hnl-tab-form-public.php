@@ -50,7 +50,8 @@ class Hnl_Tab_Form_Public {
 	public function __construct( $plugin_name, $version ) {
 
 		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+    $this->version = $version;
+    $this->hnl_tab_options = get_option($this->plugin_name);
 
 	}
 
@@ -101,17 +102,23 @@ class Hnl_Tab_Form_Public {
   }
   
   public function contact_tab() {
+
+    $title = $this->hnl_tab_options['tab_title'];
+    $portal_id = $this->hnl_tab_options['portal_id'];
+    $form_id = $this->hnl_tab_options['form_id'];
+    $tab_color = $this->hnl_tab_options['tab_color'];
+
   ?>
-  <div id="contactTab">
-  <div>Contact Us</div>
+  <div id="contactTab" style="background: <?php echo $tab_color ?>">
+  <div><?php echo $title; ?></div>
   </div>
   <div id="contactTabSlider">
     <div id="contactContainer">
-      <h1>Get Started!</h1>
+      <h3>Get Started!</h3>
       <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
       <script>hbspt.forms.create({
-          portalId: "5163160",
-          formId: "ea3e74d3-7838-4dcc-9eb0-a713be96bf77",
+          portalId: "<?php echo $form_id; ?>",
+          formId: "<?php echo $portal_id; ?>",
       onFormSubmit: function($form){
       document.cookie = 'hsf=true; path=/';
       }

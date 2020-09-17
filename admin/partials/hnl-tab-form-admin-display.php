@@ -28,11 +28,13 @@
     
       $options = get_option($this->plugin_name);
 
-      $hubspot_id = $options['hubspot_id'];
+      $portal_id = $options['portal_id'];
+      $form_id = $options['form_id'];
       $tab_title = $options['tab_title'];
       $tab_color = $options['tab_color'];
 
-      print_r($options);
+      /* Print array to check values */
+      // print_r($options);
     
     ?>
 
@@ -41,7 +43,9 @@
       do_settings_sections($this->plugin_name);
     ?>
     <strong>HubSpot Form ID</strong><br>
-    <input type="text" name="<?php echo $this->plugin_name;?>[hubspot_id]" value="<?php echo $hubspot_id; ?>" class="regular-text" />
+    <input type="text" name="<?php echo $this->plugin_name;?>[portal_id]" value="<?php echo $portal_id; ?>" class="regular-text" />
+    <br><br>
+    <input type="text" name="<?php echo $this->plugin_name;?>[form_id]" value="<?php echo $form_id; ?>" class="regular-text" />
     <br><br>
     <strong>Form tab title</strong><br>
     <input type="text" name="<?php echo $this->plugin_name;?>[tab_title]" value="<?php echo $tab_title; ?>" class="regular-text" />
