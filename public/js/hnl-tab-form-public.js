@@ -33,6 +33,7 @@
     var contactTab = document.querySelector('#contactTab');
     var contactContainer = document.querySelector('#contactTabSlider');
     var closeTab = document.querySelector('#closeTab');
+    var widthQuery =  window.matchMedia('(max-width: 500px)');
 
     function readCookie(name) {
       var nameEQ = name + "=";
@@ -62,7 +63,7 @@
           console.log('Contact Tab Open: ' + Date('MM YY DD HH:aa'));
         }, timeToOpen);
         window.onscroll = function(e) {
-          if(contactContainer.className === 'tabOpen') {
+          if(!widthQuery.matches && contactContainer.className === 'tabOpen') {
             contactContainer.classList.toggle('tabOpen');
           }
         }
