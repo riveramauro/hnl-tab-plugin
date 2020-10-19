@@ -72,7 +72,7 @@
     }
 
     if (!contactContainer.classList.contains('tabOpen')) {
-      openContactTab(1000);
+      openContactTab(40000);
     }
   });
 
